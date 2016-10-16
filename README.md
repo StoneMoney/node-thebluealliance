@@ -70,6 +70,7 @@ The year for which data will be returned.
   - **getMediaForTeam**     /       getTeamMedia
   - **getListOfEvents**     /       getEventList
   - **getEventById**     /       getEvent
+  - **getEventByAPICode**     /     getEventByCode
   - **getTeamsAtEvent**     /       getEventTeams
   - **getMatchesAtEvent**     /       getEventMatches
   - **getStatsAtEvent**     /       getEventStats
@@ -206,6 +207,10 @@ Gets all the events in FIRST in a single year
 
 ##### aliased as tba.getEvent
 
+### tba.getEventByAPICode(*eventCode*,*callback(err, teams_list)*)
+
+##### aliased as tba.getEventByCode
+
 `Event Request` on TBA API docs
 Gets event info for a single year
 
@@ -271,7 +276,6 @@ tba.getTeamsAtEvent('casb', function(err, teamsInfo) {
 - more clarity in documentation
 - add better example code
 - tests w/ [Mocha](http://visionmedia.github.io/mocha/)
-- ability to pass in more variants of ids/years (i.e. `'2014orore'` instead of `getEvent('orore',2014)`)
 
 ## Upcoming functionality improvements
 
