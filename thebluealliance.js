@@ -48,6 +48,7 @@ class initTBA {
     this.getRankingsAtEvent = this.getEventRankings;
     this.getAwardsAtEvent = this.getEventAwards;
     this.getSingleMatchFromKey = this.getSingleMatch;
+	this.getEventByAPICode = this.getEventByCode
   }
 
   /*********************************************
@@ -312,6 +313,13 @@ class initTBA {
 
     this.tbaRequest(url, callback);
   };
+  
+  //Gets event information via event key
+  getEventByAPICode (eventCode, callback) {
+    let url = `/event/${eventCode}`;
+
+    this.tbaRequest(url, callback);
+  }
 
 };
 
